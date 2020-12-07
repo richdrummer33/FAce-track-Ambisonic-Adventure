@@ -8,8 +8,8 @@ public class EnvironmentController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (Transform t in transform)
-            t.gameObject.SetActive(true);
+        foreach (Transform child in transform)
+            child.gameObject.SetActive(true);
 
         if(previousEnvironment)
             previousEnvironment.DisableEvironment();
@@ -34,7 +34,9 @@ public class EnvironmentController : MonoBehaviour
             t += Time.deltaTime;
             yield return null;
         }
-        
-        gameObject.SetActive(false);
+
+        foreach (Transform child in transform)
+            if (child != this.transform)
+                child.gameObject.SetActive(false);
     }
 }

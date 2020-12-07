@@ -8,16 +8,23 @@ public class LerpVolume : MonoBehaviour
     AudioSource source;
     float vol;
 
+    public enum LerpType { In, Out, OutThenDisable, Both }
+    public LerpType type = LerpType.Both;
+
     void Awake()
     {
         source = GetComponent<AudioSource>();
         vol = source.volume;
-        StartCoroutine(LerpVol());
+        if (type == LerpType.Both || type == LerpType.In)
+        {
+            source.volume = 0f;
+            StartCoroutine(LerpVol());
+        }
     }
     
     IEnumerator LerpVol()
     {
-        while (source.volume < 1f)
+        while (source.volume < vol)
         {
             source.volume = source.volume + Time.deltaTime / duration;
             yield return null;
@@ -37,6 +44,9 @@ public class LerpVolume : MonoBehaviour
             source.volume = source.volume - Time.deltaTime / duration / 3f;
             yield return null;
         }
+
+        if (type == LerpType.OutThenDisable)
+            gameObject.SetActive(false);
     }
 
 }

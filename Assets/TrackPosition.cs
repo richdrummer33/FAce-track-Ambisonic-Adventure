@@ -6,17 +6,35 @@ public class TrackPosition : MonoBehaviour
 {
     Transform toTrack;
     Vector3 lastPos;
+    public Vector3 offset = Vector3.up * 0.5f;
+    Vector3 followPos;
+    bool isSetup = false;
 
     private void OnEnable()
     {
         toTrack = GameObject.FindGameObjectWithTag("Player").transform;
-        lastPos = toTrack.position + Vector3.up * 0.25f;
-        transform.position = lastPos;
+        
+        lastPos = toTrack.position;
+        followPos = toTrack.position;
+        transform.position = toTrack.position;
+
+        isSetup = true;
+    }
+
+    private void OnDisable()
+    {
+        isSetup = false;
     }
 
     void Update()
     {
-        transform.position += toTrack.position - lastPos;
-        lastPos = toTrack.position;
+        if (isSetup)
+        {
+            followPos += toTrack.position - lastPos;
+
+            transform.position = followPos + offset;
+
+            lastPos = toTrack.position;
+        }
     }
 }

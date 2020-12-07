@@ -10,7 +10,7 @@ public class FaceTrackRotator : MonoBehaviour
     [SerializeField] ARFaceManager manager;
     [Range(0, 10)]
     [SerializeField] int smoothingFactor = 3; // Number of averages - this is actually a minimum*, which is approached when head is rotating fast
-    [Range(0f,5f)]
+    [Range(0f,10f)]
     [SerializeField] float velocityMultiplier = 3.75f; // Increases the delta in # aves when moving vs when still
     [SerializeField] float maxSmoothingMultiplier = 5; // Clamps the # of averages at a maximum value (approaches or reaches max value when head is very still)
     
