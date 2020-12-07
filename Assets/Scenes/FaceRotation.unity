@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: BypassEffects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2833855528596385847, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e101c271b22264f48b71075ed9b8c402, type: 3}
     - target: {fileID: 2996381134453392687, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
       propertyPath: m_Name
       value: Triggered Audio
@@ -1061,6 +1065,10 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2833855528596385847, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cdf5d21998750844a9cb18a3b565d4eb, type: 3}
     - target: {fileID: 2996381134453392687, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
       propertyPath: m_Name
       value: Triggered Audio (5)
@@ -2893,7 +2901,10 @@ MonoBehaviour:
   toEnable:
   - {fileID: 218127011}
   - {fileID: 2045036065}
-  col: {fileID: 764220189}
+  disableOnAwake: 0
+  OnCollideEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &476922676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3116,7 +3127,10 @@ MonoBehaviour:
   toEnable:
   - {fileID: 0}
   - {fileID: 385106305}
-  col: {fileID: 764220189}
+  disableOnAwake: 0
+  OnCollideEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &516551246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6614,6 +6628,10 @@ PrefabInstance:
       propertyPath: BypassEffects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2833855528596385847, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea9d1fbef0fdded4d80c67da37000e9d, type: 3}
     - target: {fileID: 2996381134453392687, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
       propertyPath: m_Name
       value: Triggered Audio (3)
@@ -8218,7 +8236,10 @@ MonoBehaviour:
   toEnable:
   - {fileID: 0}
   - {fileID: 96771425}
-  col: {fileID: 764220189}
+  disableOnAwake: 0
+  OnCollideEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1536384557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8884,6 +8905,10 @@ PrefabInstance:
       propertyPath: BypassEffects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2833855528596385847, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e8d25bf72f089c4ebd6eda7ad37e3fb, type: 3}
     - target: {fileID: 2996381134453392687, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
       propertyPath: m_Name
       value: Triggered Audio (2)
@@ -9684,6 +9709,10 @@ PrefabInstance:
       propertyPath: BypassEffects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2833855528596385847, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 066658f8bcaec264bbdcecf2f8d496c1, type: 3}
     - target: {fileID: 2996381134453392687, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
       propertyPath: m_Name
       value: Triggered Audio (4)
@@ -10728,7 +10757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ce56a5375f2ef42ad3ff3336ff7443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.25
+  speed: 0.25
 --- !u!4 &1964744050
 Transform:
   m_ObjectHideFlags: 0
@@ -11168,6 +11197,10 @@ PrefabInstance:
       propertyPath: BypassEffects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2833855528596385847, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cdf5d21998750844a9cb18a3b565d4eb, type: 3}
     - target: {fileID: 2996381134453392687, guid: 443e0585a9e60e54da62f3a576b7750d, type: 3}
       propertyPath: m_Name
       value: Triggered Audio (1)
@@ -11312,18 +11345,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 590634524627210645, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256493416592012174, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1530441312896651928, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 2428300472561235950, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7c8399bbc4d456940b7bdc9d0b412848, type: 2}
+    - target: {fileID: 2428300474039591147, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ae5042f5e5ac92f4dba23abf1f5474d9, type: 2}
     - target: {fileID: 2504850101760890081, guid: dfd357632f983714295bd09e593a762c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.42
@@ -11368,111 +11397,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2504850101760890081, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 24.503416
-      objectReference: {fileID: 0}
     - target: {fileID: 4711173484696950725, guid: dfd357632f983714295bd09e593a762c, type: 3}
       propertyPath: m_Name
       value: Cave Environment
       objectReference: {fileID: 0}
-    - target: {fileID: 5367642360799974195, guid: dfd357632f983714295bd09e593a762c, type: 3}
+    - target: {fileID: 6882898375982738753, guid: dfd357632f983714295bd09e593a762c, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7918a3eae957d404088b4d4a24fb5f43, type: 3}
-    - target: {fileID: 5367642360799974195, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687569307344180488, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.0599995
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687569307344180488, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.9100251
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687569307344180488, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.47500423
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687569307344180597, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      objectReference: {fileID: 8300000, guid: 9b14787c944f83d45bb4a8da507c54f4, type: 3}
+    - target: {fileID: 6882898376057729220, guid: dfd357632f983714295bd09e593a762c, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7918a3eae957d404088b4d4a24fb5f43, type: 3}
-    - target: {fileID: 6687569307344180597, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965542822921892739, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      objectReference: {fileID: 8300000, guid: bff05689d1242b64281a0cc2f0bc1df5, type: 3}
+    - target: {fileID: 6882898376156406204, guid: dfd357632f983714295bd09e593a762c, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7918a3eae957d404088b4d4a24fb5f43, type: 3}
-    - target: {fileID: 6965542822921892739, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123695428688732, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123695538276057, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123695603144609, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123695625273617, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123695860264038, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123696087445714, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123696731400151, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7344123697055338790, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7499903763826310764, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      objectReference: {fileID: 8300000, guid: 79cb1ba5e75751640b74e5a8de1968d0, type: 3}
+    - target: {fileID: 6882898376180381452, guid: dfd357632f983714295bd09e593a762c, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 704bc9cdb4d32464ca642ce136a39a24, type: 3}
-    - target: {fileID: 7499903763826310764, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7499903763826310764, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7499903763826310764, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: MaxDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7499903763826310775, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7499903765122138545, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8897458501040792542, guid: dfd357632f983714295bd09e593a762c, type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+      objectReference: {fileID: 8300000, guid: 2c45d026f54dc8d4cb94c146afd49428, type: 3}
+    - target: {fileID: 6882898376415353467, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 79cb1ba5e75751640b74e5a8de1968d0, type: 3}
+    - target: {fileID: 6882898376607401679, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f7f7786d2c26df41bfb795005f6fed0, type: 3}
+    - target: {fileID: 6882898377284653514, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a59c8dd28300d644aabfe0a06dd89ea1, type: 3}
+    - target: {fileID: 6882898377577408315, guid: dfd357632f983714295bd09e593a762c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f1b5d15ca06ce614fa6860e025feb294, type: 3}
+    m_RemovedComponents:
+    - {fileID: 1788278721, guid: dfd357632f983714295bd09e593a762c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dfd357632f983714295bd09e593a762c, type: 3}
 --- !u!114 &8707453752212404216 stripped
 MonoBehaviour:
