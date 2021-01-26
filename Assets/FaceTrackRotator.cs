@@ -52,8 +52,11 @@ public class FaceTrackRotator : MonoBehaviour
             faceEulers.x = -faceEulers.x; // Flip/invert (since it comes inverted)
 
             Quaternion faceRot = Quaternion.Euler(faceEulers);
-  
-            transform.rotation = SmoothRotations(smoothingFactor, RightCoordToUnityCord(face.transform.rotation));  // Quaternion.Lerp(lastRot, faceRot, Time.deltaTime * 1f / smoothingFactor);
+
+            if (smoothingFactor == 0)
+                transform.rotation = RightCoordToUnityCord(face.transform.rotation);
+            else
+                transform.rotation = SmoothRotations(smoothingFactor, RightCoordToUnityCord(face.transform.rotation));  // Quaternion.Lerp(lastRot, faceRot, Time.deltaTime * 1f / smoothingFactor);
         }
     }
 

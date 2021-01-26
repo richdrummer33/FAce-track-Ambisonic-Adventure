@@ -6,6 +6,15 @@ public class EnvironmentController : MonoBehaviour
 {
     public EnvironmentController previousEnvironment;
 
+    private void Start()
+    {
+        if(previousEnvironment != null)
+        {
+            foreach (Transform t in transform)
+                if (t.parent == transform && t != this.transform)
+                    t.gameObject.SetActive(false);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         foreach (Transform child in transform)
